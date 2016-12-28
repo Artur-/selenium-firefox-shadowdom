@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<body>
+<vaadin-upload id="my"></vaadin-upload>
+</body>
+<script>
+createUpload = () => {
+	const uploadElement = document.createElement("input");
+	uploadElement.type="file";
+	uploadElement.id="upload";
+	return uploadElement;
+};
+
+
+document.body.appendChild(createUpload());
+shadow = my.attachShadow({mode: "open"});
+shadow.appendChild(createUpload());
+</script>
